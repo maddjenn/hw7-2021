@@ -1,19 +1,19 @@
 // initializes our video variable
 var video = document.querySelector('.video');
 
-// plays the video and sets our volume
-document.querySelector("#play").addEventListener("click", function() {
-	console.log("Play Video");
-	video.load();
-	video.play();
-	document.getElementById("volume").textContent = video.volume * 100 + "%";
-});
-
 // sets video variables when we open our window
 window.addEventListener("load", function() {
 	console.log("Good job opening the window")
+	video.load();
 	video.setAttribute("autoplay", "false")
 	video.removeAttribute("loop")
+});
+
+// plays the video and sets our volume
+document.querySelector("#play").addEventListener("click", function() {
+	console.log("Play Video");
+	video.play();
+	document.getElementById("volume").textContent = video.volume * 100 + "%";
 });
 
 // pauses the video
