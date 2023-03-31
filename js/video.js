@@ -1,12 +1,14 @@
 // initializes our video variable
 var video = document.querySelector('.video');
 
-// sets video variables when we open our window
+// initializes video when we open the window
 window.addEventListener("load", function() {
 	console.log("Good job opening the window")
+	video.load();
+	
+	// set video variables
 	video.autoplay = false;
 	video.loop = false;
-	video.load();
 });
 
 // plays the video and sets our volume
