@@ -9,6 +9,7 @@ window.addEventListener("load", function() {
 	// set video variables
 	video.autoplay = false;
 	video.loop = false;
+	video.play();
 });
 
 // plays the video and sets our volume
