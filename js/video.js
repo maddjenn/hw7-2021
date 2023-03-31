@@ -4,9 +4,10 @@ var video = document.querySelector('.video');
 // sets video variables when we open our window
 window.addEventListener("load", function() {
 	console.log("Good job opening the window")
-	video.load();
+	video = document.querySelector('#player1');
 	video.setAttribute("autoplay", "false")
 	video.removeAttribute("loop")
+	video.load();
 });
 
 // plays the video and sets our volume
