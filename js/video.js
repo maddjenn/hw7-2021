@@ -14,9 +14,10 @@ window.addEventListener("load", function() {
 // plays the video and sets our volume
 document.querySelector("#play").addEventListener("click", function() {
 	console.log("Play Video");
+	video.play();
+	
 	var volume = document.getElementById("slider").value;
 	document.getElementById("volume").innerHTML = volume + "%";
-	video.play();
 });
 
 // pauses the video
@@ -37,13 +38,13 @@ document.querySelector('#skip').addEventListener("click", function () {
 
 // speeds up the video
 document.querySelector('#faster').addEventListener("click", function () {
-	video.playbackRate /= 0.9;
+	video.playbackRate += 0.1;
 	console.log("New speed " + video.playbackRate);
 });
 
 // slows down the video
 document.querySelector('#slower').addEventListener("click", function () {
-	video.playbackRate *= 0.9;
+	video.playbackRate -= 0.1;
 	console.log("New speed " + video.playbackRate);
 });
 
