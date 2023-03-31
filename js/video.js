@@ -12,8 +12,9 @@ window.addEventListener("load", function() {
 // plays the video and sets our volume
 document.querySelector("#play").addEventListener("click", function() {
 	console.log("Play Video");
+	var volume = document.getElementById("slider").value;
+	document.getElementById("volume").innerHTML = volume + "%";
 	video.play();
-	document.getElementById("volume").textContent = video.volume * 100 + "%";
 });
 
 // pauses the video
